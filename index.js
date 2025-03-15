@@ -1,3 +1,4 @@
+// Static ramen data (already in "X/10" format for consistency)
 const ramenData = [
     { id: 1, name: "Shoyu Ramen", restaurant: "Shoyu", image: "./images/shoyu.jpg", rating: "8/10", comment: "Savory!" },
     { id: 2, name: "Naruto Ramen", restaurant: "Naruto", image: "./images/naruto.jpg", rating: "10/10", comment: "Tasty!" },
@@ -9,7 +10,7 @@ const ramenData = [
 // Display all ramens in the menu
 function displayRamens() {
     const ramenMenu = document.getElementById("ramen-menu");
-    ramenMenu.innerHTML = ""; // Clear existing content
+    ramenMenu.innerHTML = ""; 
     ramenData.forEach(ramen => {
         const img = document.createElement("img");
         img.src = ramen.image;
@@ -20,7 +21,7 @@ function displayRamens() {
     });
 }
 
-// Handle clicking a ramen image
+// Function to handle clicking a ramen image
 function handleClick(ramen) {
     const displayImg = document.querySelector(".display-area img");
     const details = document.querySelector(".ramen-details");
@@ -33,10 +34,11 @@ function handleClick(ramen) {
         <h2>${ramen.restaurant}</h2>
     `;
 
-    // Update rating and comment
+    // Ensure rating is in "X/10" format
+    const formattedRating = ramen.rating.includes("/10") ? ramen.rating : `${ramen.rating}/10`;
     ratingComment.innerHTML = `
         <h2>Rating:</h2>
-        <p>${ramen.rating}</p>
+        <p>${formattedRating}</p>
         <h2>Comment:</h2>
         <p>${ramen.comment}</p>
     `;
@@ -52,12 +54,17 @@ function addSubmitListener() {
         const name = document.getElementById("name").value;
         const restaurant = document.getElementById("restaurant").value;
         const image = document.getElementById("image").value;
-        const rating = document.getElementById("rating").value;
+        let rating = document.getElementById("rating").value;
         const comment = document.getElementById("comment").value;
+
+        // Format rating as "X/10" if it’s just a number
+        if (!rating.includes("/10")) {
+            rating = `${rating}/10`;
+        }
 
         // Create new ramen object
         const newRamen = {
-            id: ramenData.length + 1, // Simple ID increment
+            id: ramenData.length + 1,
             name,
             restaurant,
             image,
@@ -88,5 +95,5 @@ function main() {
     addSubmitListener();
 }
 
-// Run main when DOM is fully loaded
+// Run the app
 document.addEventListener("DOMContentLoaded", main);

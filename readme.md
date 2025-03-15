@@ -18,7 +18,7 @@ Welcome to the Ramen Rating App! This is a web application that lets you rate an
 
 - `index.html` - Main HTML file
 - `styles.css` - CSS file for styling
-- `app.js` - JavaScript file for handling interactions and DOM manipulation
+- `index.js` - JavaScript file for handling interactions and DOM manipulation
 
 ## License
 
