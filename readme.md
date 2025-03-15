@@ -8,7 +8,7 @@ Welcome to the Ramen Rating App! This is a web application that lets you rate an
 - View ratings and reviews
 - Uses static data 
 
-## Languages Used
+## Technologies Used
 
 - HTML
 - CSS
