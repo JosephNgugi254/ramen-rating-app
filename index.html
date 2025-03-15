@@ -3,10 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Ramen Rating App</title>
 </head>
 <body>
-   
+   <div class="heading">
+        <h1>Ramen Rater</h1>
+   </div>
+   <div id  ="ramen-menu">
+        <img src="./images/shoyu.jpg" alt="shoyu-ramen-image" id="1">
+        <img src="./images/naruto.jpg" alt="Naruto-ramen-image" id="2">
+        <img src="./images/nirvana.jpg" alt="miso-ramen-image" id="3">
+        <img src="./images/gyukotsu.jpg" alt="gyukotsu-ramen-image" id="4">
+        <img src="./images/kojiro.jpg" alt="kojiro-ramen-image" id="5">
+   </div>
+    <div class="display-area">
+        <div class="image-container">
+            <img src="./images/naruto.jpg" alt="">
+            <div class="ramen-details">
+                <h1>Naruto Ramen</h1>
+                <h2>Naruto</h2>
+            </div>
+        </div>            
+    </div>
+    <div id="rating-and-comment">
+        <h2>Rating:</h2>
+        <p>10/10</p>
+        <h2>Comment:</h2>
+        <p>Tasty!</p>
+    </div> 
+    <div class="ramen-form-container">
+        <h2>Add New Ramen</h2>
+        <form id="ramen-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="restaurant">Restaurant:</label>
+            <input type="text" id="restaurant" name="restaurant">
+            <label for="image">Image:</label>
+            <input type="text" id="image" name="image">
+            <label for="rating">Rating:</label>
+            <input type="text" id="rating" name="rating">
+            <label for="comment">Comment:</label>
+            <textarea type="text" id="comment" name="comment"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 <script src="./index.js"></script>    
 </body>
 </html>
