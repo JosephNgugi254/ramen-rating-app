@@ -57,7 +57,6 @@ function addSubmitListener() {
         let rating = document.getElementById("rating").value;
         const comment = document.getElementById("comment").value;
 
-        // Format rating as "X/10" if the user just enters a number
         if (!rating.includes("/10")) {
             rating = `${rating}/10`;
         }
@@ -73,7 +72,6 @@ function addSubmitListener() {
 
         ramens.push(newRamen);
 
-        // Add new image to menu
         const ramenMenu = document.getElementById("ramen-menu");
         const img = document.createElement("img");
         img.src = image;
@@ -86,11 +84,9 @@ function addSubmitListener() {
     });
 }
 
-// Initialize the app
 function main() {
     displayRamens();
     addSubmitListener();
 }
 
-// Run the app
 document.addEventListener("DOMContentLoaded", main);
