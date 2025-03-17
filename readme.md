@@ -1,6 +1,6 @@
 # Ramen Rating App
 
-Welcome to the Ramen Rating App! This is a web application that lets you rate and review different ramen dishes. It's a fun way to practice handling user events, manipulating the DOM, structuring JavaScript code, and using Git.
+Welcome to the Ramen Rating App! This is a web application that lets you rate and review different ramen dishes. 
 
 ## Features
 
