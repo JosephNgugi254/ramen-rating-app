@@ -20,8 +20,4 @@ Welcome to the Ramen Rating App! This is a web application that lets you rate an
 - `styles.css` - CSS file for styling
 - `index.js` - JavaScript file for handling interactions and DOM manipulation
 
-## License
 
-This project is licensed under the MIT License.
-
-Happy coding!
