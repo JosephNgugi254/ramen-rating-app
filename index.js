@@ -31,6 +31,7 @@ function handleClick(ramen) {
     `;
    
     let formattedRating;
+    
     if (ramen.rating.includes("/10")) {
         formattedRating = ramen.rating;
     } else {
@@ -56,6 +57,11 @@ function addSubmitListener() {
         const image = document.getElementById("image").value;
         let rating = document.getElementById("rating").value;
         const comment = document.getElementById("comment").value;
+
+        if (parseFloat(rating) > 10) {
+            alert("Rating cannot be more than 10.");
+            return;
+        }
 
         if (!rating.includes("/10")) {
             rating = `${rating}/10`;
